@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "name": "Alex Morgan",
+    "bio": "For the past 5 years I have specialized in **Product Design for Decentralization**, focusing on transforming complex Web3 architecture (DeFi, Account Abstraction, DDEs) into smooth, high-adoption consumer UX across mobile, web and spatial computing.\n\nMy career is defined by tackling Web3's hardest challenge - mass adoption.\nI was the Lead Designer who took <a href=\"#\">Gist</a> (Social-fi) from concept to launch, architecting the unique core iOS experience and the UX vision for Apple Vision Pro, which drove 10,000+ waitlist sign-ups.\nSimultaneously, I designed the end-to-end workflow for <a href=\"#\">Chaquen</a> (Game-Fi), implementing Account Abstraction to eliminate wallet friction and scale the platform to 18,000+ active users.\nIn Decentralized Finance (DeFi), I built trust for high-stakes environments, redesigning core flows at <a href=\"#\">Sperax</a> (managing over $10.8 Million TVL) and refining yield/governance UX at <a href=\"#\">Vault Craft</a>.\nBeyond product, I personally build and manage the full design ecosystem, including high-converting waitlist pages and company blogs using <a href=\"#\">Framer</a> and <a href=\"#\">Cursor AI</a>.",
+    "email": "alex@example.com"
+  },
+  "caseStudies": [
+    {
+      "title": "DeFi Yield Farming Platform",
+      "summary": "Developed a decentralized yield farming platform with automated strategies, enabling users to optimize their crypto returns with minimal gas fees.",
+      "coverImage": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=800&fit=crop",
+      "slug": "defi-yield-farming-platform",
+      "content": "Full case study content for DeFi Yield Farming Platform..."
+    },
+    {
+      "title": "NFT Marketplace Protocol",
+      "summary": "Built a gas-efficient NFT marketplace protocol with royalty enforcement and cross-chain compatibility, serving over 10,000 active users.",
+      "coverImage": "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=1200&h=800&fit=crop",
+      "slug": "nft-marketplace-protocol",
+      "content": "Full case study content for NFT Marketplace Protocol..."
+    },
+    {
+      "title": "DAO Governance Platform",
+      "summary": "Created a comprehensive DAO governance platform with voting mechanisms, proposal systems, and treasury management tools for decentralized organizations.",
+      "coverImage": "https://images.unsplash.com/photo-1639322537221-d8704d3b3c0a?w=1200&h=800&fit=crop",
+      "slug": "dao-governance-platform",
+      "content": "Full case study content for DAO Governance Platform..."
+    },
+    {
+      "title": "Cross-Chain Bridge Protocol",
+      "summary": "Architected a secure cross-chain bridge protocol enabling seamless asset transfers between Ethereum, Polygon, and other EVM-compatible chains.",
+      "coverImage": "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=1200&h=800&fit=crop",
+      "slug": "cross-chain-bridge-protocol",
+      "content": "Full case study content for Cross-Chain Bridge Protocol..."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Figma",
+      "icon": "🎨"
+    },
+    {
+      "name": "Framer",
+      "icon": "⚡"
+    },
+    {
+      "name": "Cursor AI",
+      "icon": "🤖"
+    },
+    {
+      "name": "Jitter",
+      "icon": "✨"
+    }
+  ],
+  "personalProjects": [
+    {
+      "name": "Quibly",
+      "description": "Chrome Plugin",
+      "icon": "🍃",
+      "url": "#"
+    },
+    {
+      "name": "Kiko AI",
+      "description": "AI Assistant",
+      "icon": "⚫",
+      "url": "#"
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com",
+      "icon": "in"
+    },
+    {
+      "name": "Website",
+      "url": "https://example.com",
+      "icon": "🌐"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com",
+      "icon": "X"
+    }
+  ]
+}
