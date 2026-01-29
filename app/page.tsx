@@ -1,45 +1,59 @@
 import Header from '@/components/Header';
 import CaseStudyCard from '@/components/CaseStudyCard';
 import Footer from '@/components/Footer';
+import Experience from '@/components/Experience';
 import SoftwareTools from '@/components/SoftwareTools';
-import PersonalProjects from '@/components/PersonalProjects';
-import { getPortfolioData, getPortfolioType } from '@/lib/get-data';
+import { getPortfolioData } from '@/lib/get-data';
 
 export default async function Home() {
-  const niche = await getPortfolioType();
-  console.log('Current Niche:', niche);
-  
   const data = await getPortfolioData();
-  const { metadata, caseStudies, tools, personalProjects, socialLinks } = data;
+  const { metadata, caseStudies, tools, experiences, contactLinks } = data;
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-8">
-      <Header
-        name={metadata.name}
-        bio={metadata.bio}
-        email={metadata.email}
-      />
-      <main>
-        <section className="mb-16">
-          <h2 className="text-sm font-light text-gray-400 mb-6">Case Studies:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-16">
-            {caseStudies.map((study) => (
+    <div className="max-w-2xl mx-auto px-6 py-24">
+      <div className="animate-fade-in-up">
+        <Header
+          name={metadata.name}
+          bio={metadata.bio}
+          email={metadata.email}
+        />
+      </div>
+
+      {/* WORK Section */}
+      <section className="mt-24 mb-16 animate-fade-in-up animate-delay-200">
+        <h2 className="text-sm font-light text-zinc-400 mb-2 uppercase tracking-wider" style={{ fontFamily: 'monospace' }}>WORK</h2>
+        <p className="text-base text-zinc-400 font-light mb-12">
+          Below are some select projects, full walkthroughs on request.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {caseStudies.slice(0, 4).map((study, index) => (
+            <div key={study.slug} className="animate-fade-in-up" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
               <CaseStudyCard
-                key={study.slug}
                 title={study.title}
                 summary={study.summary}
                 coverImage={study.coverImage}
                 slug={study.slug}
               />
-            ))}
-          </div>
-        </section>
-        <SoftwareTools tools={tools} />
-        {personalProjects && personalProjects.length > 0 && (
-          <PersonalProjects projects={personalProjects} />
-        )}
-      </main>
-      <Footer socialLinks={socialLinks} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {experiences && experiences.length > 0 && (
+        <div className="animate-fade-in-up animate-delay-400">
+          <Experience experiences={experiences} />
+        </div>
+      )}
+
+      {tools && tools.length > 0 && (
+        <div className="animate-fade-in-up animate-delay-500">
+          <SoftwareTools tools={tools.slice(0, 8)} />
+        </div>
+      )}
+
+      <div className="animate-fade-in-up animate-delay-500">
+        <Footer email={metadata.email} contactLinks={contactLinks} />
+      </div>
     </div>
   );
 }

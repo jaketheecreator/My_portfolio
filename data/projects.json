@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "name": "Amana Braimah",
+    "bio": "I'm a product designer with 5+ years of experience simplifying complex systems into high-adoption consumer products. often implementing my designs in production using tools like Framer and Cursor.\n\nI've led design for **<a href=\"/work/gist\">Gist</a>**, **<a href=\"/work/sperax\">Sperax</a>**, and **<a href=\"/work/chaquen\">Chaquen</a>**, and contributed to core DeFi UX at **<a href=\"/work/vaultcraft\">Vaultcraft</a>**, building mobile, web, and emerging-platform experiences used by thousands.\n\nI also cofounded **<a href=\"https://salypay.com\">Salypay</a>**, a WhatsApp-based financial product that enables fast, trust-first transactions through conversational interfaces.\n\nYou can reach out via **<a href=\"mailto:braimahjake15@gmail.com\">email</a>** or send **<a href=\"https://x.com/braimah_dsgnr?s=09\">DM</a>** on x.",
+    "email": "alex@example.com"
+  },
+  "caseStudies": [
+    {
+      "title": "Gist",
+      "summary": "Designed a time-bound social media experience (iOS & Vision Pro).",
+      "coverImage": "/assets/Gist_cover.avif",
+      "slug": "gist",
+      "content": "Full case study content for Gist..."
+    },
+    {
+      "title": "Sperax",
+      "summary": "Led design and web development for a DeFi dApp, with over $10.8M  TVL.",
+      "coverImage": "/assets/sperax_cover.avif",
+      "slug": "sperax",
+      "content": "Full case study content for Sperax..."
+    },
+    {
+      "title": "Chaquen",
+      "summary": "Led design and web development for an on-chain fantasy league dApp.",
+      "coverImage": "/assets/chaquen_cover.avif",
+      "slug": "chaquen",
+      "content": "Full case study content for Chaquen..."
+    },
+    {
+      "title": "Vaultcraft",
+      "summary": "Redesigned Popcorn's dApp and landing page, supporting the pivot to Vault Craft.",
+      "coverImage": "/assets/Vaultcraft_cover.avif",
+      "slug": "vaultcraft",
+      "content": "Full case study content for Vaultcraft..."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Figma",
+      "icon": "figma"
+    },
+    {
+      "name": "Framer",
+      "icon": "framer"
+    },
+    {
+      "name": "Cursor AI",
+      "icon": "cursor"
+    },
+    {
+      "name": "Jitter",
+      "icon": "jitter"
+    },
+    {
+      "name": "GPT",
+      "icon": "gpt"
+    },
+    {
+      "name": "Gemini",
+      "icon": "gemini"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github"
+    }
+  ],
+  "experiences": [
+    {
+      "dates": "Sep 2025 – Dec 2025",
+      "role": "Lead Product Designer",
+      "company": "Gist (Contract)",
+      "description": "Led core iOS experience and Vision Pro interface design.",
+      "logo": "🟢"
+    },
+    {
+      "dates": "Jul 2024 – Sep 2025",
+      "role": "Lead Designer",
+      "company": "Sperax DAO",
+      "description": "Redesigned DeFi staking and lending UX for a protocol managing $10.8M+ TVL.",
+      "logo": "🔷"
+    },
+    {
+      "dates": "Aug 2023 – Jun 2024",
+      "role": "Lead Designer",
+      "company": "Chaquen",
+      "description": "Designed and launched a fantasy sports dApp scaling to 18k+ active users.",
+      "logo": "🟢"
+    },
+    {
+      "dates": "Nov 2022 – Jun 2023",
+      "role": "Product Designer",
+      "company": "Vault Craft (Popcorn)",
+      "description": "Designed DeFi dashboards and simplified yield strategy flows.",
+      "logo": "🟢"
+    },
+    {
+      "dates": "May 2022 – Oct 2022",
+      "role": "UI/UX Designer",
+      "company": "Awa Digital Agency",
+      "description": "Designed web and mobile systems improving delivery speed by 30%.",
+      "logo": "🟢"
+    },
+    {
+      "dates": "May 2021 – Apr 2022",
+      "role": "Designer",
+      "company": "Settle Africa",
+      "description": "Designed core UX for a rental marketplace across web and mobile.",
+      "logo": "🟢"
+    }
+  ],
+  "contactLinks": [
+    {
+      "name": "Email",
+      "url": "braimahjake15@gmail.com",
+      "value": "braimahjake",
+      "icon": "email"
+    },
+    {
+      "name": "X.com",
+      "url": "https://x.com/braimah_dsgnr?s=09",
+      "value": "@braimah_dsgnr",
+      "icon": "x"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/jaketheecreator",
+      "value": "@jaketheecreator",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/amana-braimah-281bab21a",
+      "value": "/in/amana_braimah",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Dribbble",
+      "url": "https://dribbble.com/braimahjake15",
+      "value": "@braimahjake",
+      "icon": "dribbble"
+    }
+  ]
+}

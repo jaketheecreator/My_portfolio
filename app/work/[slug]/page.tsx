@@ -18,7 +18,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
   }
 
   const { caseStudy, data } = result;
-  const { metadata, socialLinks } = data;
+  const { metadata, contactLinks } = data;
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-8">
@@ -53,7 +53,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           </div>
         </article>
       </main>
-      <Footer socialLinks={socialLinks} />
+      <Footer contactLinks={contactLinks} />
     </div>
   );
 }

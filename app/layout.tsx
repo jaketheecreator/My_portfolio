@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AdminSwitcher from "@/components/AdminSwitcher";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,7 +18,6 @@ export default function RootLayout({
         <div className="relative z-10 min-h-screen">
           {children}
         </div>
-        <AdminSwitcher />
       </body>
     </html>
   );
