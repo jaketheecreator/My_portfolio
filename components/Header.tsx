@@ -1,12 +1,11 @@
-import Link from 'next/link';
-
 interface HeaderProps {
   name: string;
   bio: string;
   email: string;
+  onAiModeToggle?: () => void;
 }
 
-export default function Header({ name, bio, email }: HeaderProps) {
+export default function Header({ name, bio, email, onAiModeToggle }: HeaderProps) {
   // Process bio text to convert HTML links to styled React elements
   const processBio = (paragraph: string) => {
     const parts: (string | JSX.Element)[] = [];
@@ -114,11 +113,9 @@ export default function Header({ name, bio, email }: HeaderProps) {
 
       {/* Name - left aligned */}
       <div className="mb-2">
-        <Link href="/">
-          <h1 className="text-2xl font-medium text-white hover:text-white transition-colors cursor-pointer">
-            {name}
-          </h1>
-        </Link>
+        <h1 className="text-2xl font-medium text-white">
+          {name}
+        </h1>
       </div>
 
       {/* Bio - left aligned */}
@@ -129,6 +126,21 @@ export default function Header({ name, bio, email }: HeaderProps) {
           </p>
         ))}
       </div>
+
+      {/* AI Mode Toggle Button */}
+      {onAiModeToggle && (
+        <div className="mt-6 flex items-center gap-3">
+          <button
+            onClick={onAiModeToggle}
+            className="text-base text-white font-light border-b border-dotted border-white/30 hover:border-white/50 transition-colors cursor-pointer"
+          >
+            Ask my AI
+          </button>
+          <span className="relative inline-flex items-center px-2 py-0.5 rounded-full bg-zinc-900/50 text-xs text-zinc-400 font-light uppercase tracking-wider">
+            BETA
+          </span>
+        </div>
+      )}
     </header>
   );
 }

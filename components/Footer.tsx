@@ -78,6 +78,11 @@ export default function Footer({ email, contactLinks }: FooterProps) {
           </a>
         ))}
       </div>
+      <div className="mt-12 text-center">
+        <p className="text-sm text-zinc-500 font-light">
+          Designed with love by Amana
+        </p>
+      </div>
     </footer>
   );
 }
