@@ -5,7 +5,11 @@ export const metadata: Metadata = {
   title: "Amana Braimah | Product Designer & AI Developer",
   description: "A Product Designer crafting intentional digital experiences. Specialized in bridging the gap between design systems and AI-powered development.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Amana Braimah | Product Designer & AI Developer",
