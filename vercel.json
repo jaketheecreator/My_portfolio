@@ -1,12 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/midas-demo",
-      "destination": "https://midas-demo-lilac.vercel.app"
+      "destination": "https://midas-demo-lilac.vercel.app",
+      "permanent": false
     },
     {
       "source": "/burnrate",
-      "destination": "https://burnrate-r9up.vercel.app"
+      "destination": "https://burnrate-r9up.vercel.app",
+      "permanent": false
     }
   ]
 }
