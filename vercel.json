@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/midas-demo",
+      "destination": "https://midas-demo-lilac.vercel.app"
+    },
+    {
+      "source": "/burnrate",
+      "destination": "https://burnrate-r9up.vercel.app"
+    }
+  ]
+}
