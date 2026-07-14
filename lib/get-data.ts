@@ -33,6 +33,16 @@ export interface Tool {
   icon: string;
 }
 
+export interface ShippedProject {
+  title: string;
+  summary: string;
+  coverImage: string;
+  slug: string;
+  link: string | null;
+  comingSoon: boolean;
+  content: string;
+}
+
 export interface ContactLink {
   name: string;
   url: string;
@@ -43,6 +53,7 @@ export interface ContactLink {
 export interface PortfolioData {
   metadata: Metadata;
   caseStudies: CaseStudy[];
+  shippedProjects?: ShippedProject[];
   tools?: Tool[];
   experiences?: Experience[];
   contactLinks?: ContactLink[];
@@ -56,13 +67,19 @@ export async function getPortfolioData(): Promise<PortfolioData> {
 }
 
 /**
- * Finds a specific case study by slug
+ * Finds a specific case study by slug, checking both caseStudies and shippedProjects
  */
-export async function getCaseStudyBySlug(slug: string): Promise<{ caseStudy: CaseStudy; data: PortfolioData } | null> {
+export async function getCaseStudyBySlug(slug: string): Promise<{ caseStudy: CaseStudy | ShippedProject; data: PortfolioData } | null> {
   const study = projectsData.caseStudies.find(cs => cs.slug === slug);
 
   if (study) {
     return { caseStudy: study, data: projectsData as PortfolioData };
+  }
+
+  const shipped = projectsData.shippedProjects?.find(sp => sp.slug === slug);
+
+  if (shipped) {
+    return { caseStudy: shipped, data: projectsData as PortfolioData };
   }
 
   return null;

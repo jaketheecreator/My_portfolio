@@ -70,3 +70,13 @@ body {
 .animate-delay-500 {
   animation-delay: 0.5s;
 }
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-border {
+  to { --border-angle: 360deg; }
+}

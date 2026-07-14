@@ -22,14 +22,17 @@ export default function CaseStudyCard({
   }
 
   // Special handling for all cards - open external URLs
+  const isFreeAgent = slug === 'free-agent';
   const isGist = slug === 'gist';
   const isSperax = slug === 'sperax';
   const isChaquen = slug === 'chaquen';
   const isVaultcraft = slug === 'vaultcraft';
-  const isExternalLink = isGist || isSperax || isChaquen || isVaultcraft;
-  
+  const isExternalLink = isFreeAgent || isGist || isSperax || isChaquen || isVaultcraft;
+
   let href: string;
-  if (isGist) {
+  if (isFreeAgent) {
+    href = 'https://www.gofreeagent.com/';
+  } else if (isGist) {
     href = 'https://gistweb3.com';
   } else if (isSperax) {
     href = 'https://sperax.io/';

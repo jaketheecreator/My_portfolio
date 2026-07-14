@@ -1,10 +1,17 @@
 {
   "metadata": {
     "name": "Amana Braimah",
-    "bio": "I'm a product designer with 5+ years of experience simplifying complex systems into high-adoption consumer products. Often implementing my designs in production using tools like Framer and Cursor.\n\nI've led design for **<a href=\"https://gistweb3.com\">Gist</a>**, **<a href=\"https://sperax.io/\">Sperax</a>**, and **<a href=\"https://chaquen.io/\">Chaquen</a>**, and contributed to core DeFi UX at **<a href=\"https://vaultcraft.io\">Vaultcraft</a>**, building mobile, web, and emerging-platform experiences used by thousands.\n\nI also cofounded **<a href=\"https://salypay.com\">Salypay</a>**, a WhatsApp-based financial product that enables fast, trust-first transactions through conversational interfaces.\n\nYou can reach out via **<a href=\"mailto:braimahjake15@gmail.com\">email</a>** or send a **<a href=\"https://x.com/braimah_dsgnr?s=09\">DM</a>** on x.",
+    "bio": "I'm a product designer with 5+ years of experience simplifying complex systems into high-adoption consumer products. Often implementing my designs in production using tools like Framer, Cursor, and Claude.\n\nMost recently, I led product design at **<a href=\"https://www.gofreeagent.com/\">Free Agent</a>**, building the full athlete recruiting platform end to end. Before that, I led design for **<a href=\"https://gistweb3.com/\">Gist</a>**, **<a href=\"https://sperax.io/\">Sperax</a>**, and **<a href=\"https://chaquen.io/\">Chaquen</a>**, and contributed to core DeFi UX at **<a href=\"https://vaultcraft.io/\">Vaultcraft</a>**, building mobile, web, and emerging-platform experiences used by thousands.\n\nI also cofounded **<a href=\"https://salypay.com/\">Salypay</a>**, a WhatsApp-based financial product that enables fast, trust-first transactions through conversational interfaces.\n\nYou can reach out via **<a href=\"mailto:braimahjake15@gmail.com\">email</a>** or send a **<a href=\"https://x.com/braimah_dsgnr?s=09\">DM</a>** on x.",
     "email": "alex@example.com"
   },
   "caseStudies": [
+    {
+      "title": "Free Agent",
+      "summary": "Designed the full recruiting platform, web, mobile, and internal AI bot.",
+      "coverImage": "/assets/freeagent_cover.png",
+      "slug": "free-agent",
+      "content": "Free Agent set out to give athletes the same kind of career infrastructure that other industries take for granted — a real platform for discovery, connection, and opportunity, rather than scattered DMs and word of mouth.\n\nI led product design across the entire ecosystem: the athlete-facing web app, the company-facing web app, and the athlete mobile app, covering everything from onboarding through opportunity discovery and network connections. Three distinct products, one coherent system.\n\nAlongside the core platform, I designed and built the marketing website in Framer, establishing the visual language and interaction model that would carry the brand across desktop and mobile for every public-facing touchpoint.\n\nI implemented Google Analytics 4 with custom event tracking on primary calls to action, giving the team visibility into acquisition and conversion for the first time. I designed and shipped transactional email templates in SendGrid covering verification, job post lifecycle, and platform notifications, and built the Sales Combine landing page and contact form, turning program requirements into a focused conversion flow for athlete applicants.\n\nBeyond product, I managed and executed the content and SEO strategy for the Free Agent blog, growing it to first-page Google rankings within four months of launch.\n\nI also built Playbook, an internal AI Slack bot integrating Jira, HubSpot, Apollo, and Google Drive, giving the team real-time intelligence across tools without needing to leave Slack."
+    },
     {
       "title": "Gist",
       "summary": "Designed a time-bound social media experience (iOS & Vision Pro).",
@@ -20,18 +27,40 @@
       "content": "Full case study content for Sperax..."
     },
     {
-      "title": "Chaquen",
-      "summary": "Led design and web development for an on-chain fantasy league dApp.",
-      "coverImage": "/assets/chaquen_cover.avif",
-      "slug": "chaquen",
-      "content": "Full case study content for Chaquen..."
-    },
-    {
       "title": "Vaultcraft",
       "summary": "Redesigned Popcorn's dApp and landing page, supporting the pivot to Vault Craft.",
       "coverImage": "/assets/Vaultcraft_cover.avif",
       "slug": "vaultcraft",
       "content": "Full case study content for Vaultcraft..."
+    }
+  ],
+  "shippedProjects": [
+    {
+      "title": "Midas",
+      "summary": "Built an autonomous job-hunting agent that scans 18 boards, scores roles against my profile, and drafts tailored applications.",
+      "coverImage": "/assets/midas_cover.png",
+      "slug": "midas",
+      "link": "/midas-demo",
+      "comingSoon": false,
+      "content": "**Why I built this**\n\nI started applying to design roles again this year and immediately remembered why I hate it. Fifteen tabs open, checking the same boards over and over, most showing listings I'd already seen.\n\nMy first instinct was bigger. What if it could search and apply for me? That didn't survive contact with reality. Playwright can navigate a page, but reliably filling out forms across dozens of different sites turned out to be a much harder problem than I expected. So I scoped it down to something simpler, find everything, score it, prepare the application, and let me decide.\n\n**Figuring out where to even look**\n\nI mapped out where design roles actually get posted, company pages, aggregators, niche boards, then grouped them by how often they updated.\n\nI also tested Playwright against real application forms early on and watched it choke on anything non-standard. That's what convinced me auto-apply wasn't realistic yet.\n\n**The line I wouldn't cross**\n\nMidas never applies on its own. Every job gets scored, every strong match gets a tailored CV and cover letter, but the submission is always mine. It would have been easy to push further, but I didn't want something sending applications in my name without me seeing it first.\n\n**What's actually happening under the hood**\n\nMidas scans 18 job boards on a recurring schedule, from company pages on Greenhouse and Lever to aggregators like Remote OK. Every listing gets scored using Claude against a profile I wrote out ahead of time, weighing role fit, domain, remote compatibility, tools, seniority, salary, and freshness. Strong matches get a CV and cover letter generated, then land in a queue for me to review.\n\nI designed and directed the build using Claude Code and Cursor, working through the architecture and every decision myself, then implementing it through AI-assisted development. The dashboard shows reasoning for every job, not just a score, because I wanted to trust it enough to act on it.\n\n**Where it nearly broke**\n\nThe cron job scanning all 18 boards maxed out my API key in a single afternoon. There was no cap on how many calls it could make, so it just kept going until my key got throttled. I switched to a cheaper model, added a hard daily cap, and stretched the scan intervals so it couldn't happen again.\n\nGetting the demo ready was its own problem. I needed a version people could click through without touching my real keys or data, so I built a separate deployment with no real credentials at all.\n\n**What I'd do differently**\n\nI'd add cost caps before writing a single line of scraping logic, not after watching my key get maxed out. I'd build deduplication before scoring too, since the same job posted twice quietly burned through my daily budget. And I'd design with a demo dataset in mind from the start, instead of untangling one after the fact."
+    },
+    {
+      "title": "Burnrate",
+      "summary": "Built an AI-powered runway calculator that tells founders their exact death date, then gives them an advisor to fix it.",
+      "coverImage": "/assets/burnrate_cover.png",
+      "slug": "burnrate",
+      "link": "/burnrate",
+      "comingSoon": false,
+      "content": "Most runway calculators show you a number. Burnrate shows you a date — the exact day your company runs out of money if nothing changes. That reframing is deliberate: a number is abstract, a date is real.\n\nEnter your cash on hand, burn rate, revenue, and growth rate, and Burnrate calculates your runway in real time, with the background visually shifting from calm green to urgent red as the picture worsens. Once your numbers are in, the system classifies your situation — high burn, no revenue, stalled growth, or healthy — and connects you with one of four AI advisors, each with a distinct personality and specialty, to talk through what to actually do about it.\n\nEvery advisor conversation can be copied as a ready-to-use AI skill, so the context and advice travels with you into Claude, ChatGPT, or Gemini rather than being locked inside the tool.\n\nBuilt with Next.js, Prisma, Neon Postgres, and the Claude API via OpenRouter, with a custom WebGL reactive background built on top of OGL."
+    },
+    {
+      "title": "Warrp Browser",
+      "summary": "Rethinking what a browser could be for how people actually work today.",
+      "coverImage": "/assets/warp_cover.png",
+      "slug": "warp-browser",
+      "link": null,
+      "comingSoon": true,
+      "content": ""
     }
   ],
   "tools": [
@@ -65,6 +94,13 @@
     }
   ],
   "experiences": [
+    {
+      "dates": "Feb 2026 – Jun 2026",
+      "role": "Lead Product Designer",
+      "company": "Free Agent (Contract)",
+      "description": "Designed the athlete recruiting platform across web, mobile, and an AI bot.",
+      "logo": "🟢"
+    },
     {
       "dates": "Sep 2025 – Dec 2025",
       "role": "Lead Product Designer",

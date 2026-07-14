@@ -3,15 +3,17 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import CaseStudyCard from '@/components/CaseStudyCard';
+import ShippedProjectCard from '@/components/ShippedProjectCard';
 import Footer from '@/components/Footer';
 import Experience from '@/components/Experience';
 import SoftwareTools from '@/components/SoftwareTools';
 import ChatInterface from '@/components/ChatInterface';
-import type { Metadata, CaseStudy, Tool, Experience as ExperienceType, ContactLink } from '@/lib/get-data';
+import type { Metadata, CaseStudy, ShippedProject, Tool, Experience as ExperienceType, ContactLink } from '@/lib/get-data';
 
 interface HomeClientProps {
   metadata: Metadata;
   caseStudies: CaseStudy[];
+  shippedProjects?: ShippedProject[];
   tools?: Tool[];
   experiences?: ExperienceType[];
   contactLinks?: ContactLink[];
@@ -20,6 +22,7 @@ interface HomeClientProps {
 export default function HomeClient({
   metadata,
   caseStudies,
+  shippedProjects,
   tools,
   experiences,
   contactLinks,
@@ -64,6 +67,22 @@ export default function HomeClient({
           ))}
         </div>
       </section>
+
+      {shippedProjects && shippedProjects.length > 0 && (
+        <section className="mt-24 mb-16 animate-fade-in-up animate-delay-300">
+          <h2 className="text-sm font-light text-zinc-400 mb-2 uppercase tracking-wider" style={{ fontFamily: 'monospace' }}>Stuff I've shipped</h2>
+          <p className="text-base text-zinc-400 font-light mb-12">
+            Three tools I designed, then brought to life with AI.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {shippedProjects.map((project, index) => (
+              <div key={project.slug} className="animate-fade-in-up" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+                <ShippedProjectCard {...project} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {experiences && experiences.length > 0 && (
         <div className="animate-fade-in-up animate-delay-400">
